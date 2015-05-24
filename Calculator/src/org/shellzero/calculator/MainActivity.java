@@ -21,96 +21,97 @@ public class MainActivity extends Activity {
 	Button btnClear;
 
 	TextView result;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		// Operand fields from the main screen
-				operand1 = (EditText) findViewById(R.id.editOperand1);
-				operand2 = (EditText) findViewById(R.id.editOperand2);
+		operand1 = (EditText) findViewById(R.id.editOperand1);
+		operand2 = (EditText) findViewById(R.id.editOperand2);
 
-				// Associate buttons
-				btnAdd = (Button) findViewById(R.id.btnAdd);
-				btnSubtract = (Button) findViewById(R.id.btnSubtract);
-				btnMultiply = (Button) findViewById(R.id.btnMultiply);
-				btnDivide = (Button) findViewById(R.id.btnDivide);
-				btnClear = (Button) findViewById(R.id.btnClear);
+		// Associate buttons
+		btnAdd = (Button) findViewById(R.id.btnAdd);
+		btnSubtract = (Button) findViewById(R.id.btnSubtract);
+		btnMultiply = (Button) findViewById(R.id.btnMultiply);
+		btnDivide = (Button) findViewById(R.id.btnDivide);
+		btnClear = (Button) findViewById(R.id.btnClear);
 
-				// Associate result textfield
-				result = (TextView) findViewById(R.id.textResult);
+		// Associate result textfield
+		result = (TextView) findViewById(R.id.textResult);
 
-				// Add functionality
-				btnAdd.setOnClickListener(new View.OnClickListener() {
+		// Add functionality
+		btnAdd.setOnClickListener(new View.OnClickListener() {
 
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						float oper1 = Float.parseFloat(operand1.getText().toString());
-						float oper2 = Float.parseFloat(operand2.getText().toString());
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				float oper1 = Float.parseFloat(operand1.getText().toString());
+				float oper2 = Float.parseFloat(operand2.getText().toString());
 
-						float theResult = oper1 + oper2;
+				float theResult = oper1 + oper2;
 
-						result.setText(Float.toString(theResult));
-					}
-				});
+				result.setText(Float.toString(theResult));
+			}
+		});
 
-				// Subtract functionality
-				btnSubtract.setOnClickListener(new View.OnClickListener() {
+		// Subtract functionality
+		btnSubtract.setOnClickListener(new View.OnClickListener() {
 
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						float oper1 = Float.parseFloat(operand1.getText().toString());
-						float oper2 = Float.parseFloat(operand2.getText().toString());
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				float oper1 = Float.parseFloat(operand1.getText().toString());
+				float oper2 = Float.parseFloat(operand2.getText().toString());
 
-						float theResult = oper1 - oper2;
+				float theResult = oper1 - oper2;
 
-						result.setText(Float.toString(theResult));
-					}
-				});
+				result.setText(Float.toString(theResult));
+			}
+		});
 
-				// Multiply functionality
-				btnMultiply.setOnClickListener(new View.OnClickListener() {
+		// Multiply functionality
+		btnMultiply.setOnClickListener(new View.OnClickListener() {
 
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						float oper1 = Float.parseFloat(operand1.getText().toString());
-						float oper2 = Float.parseFloat(operand2.getText().toString());
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				float oper1 = Float.parseFloat(operand1.getText().toString());
+				float oper2 = Float.parseFloat(operand2.getText().toString());
 
-						float theResult = oper1 * oper2;
+				float theResult = oper1 * oper2;
 
-						result.setText(Float.toString(theResult));
-					}
-				});
+				result.setText(Float.toString(theResult));
+			}
+		});
 
-				// Divide functionality
-				btnDivide.setOnClickListener(new View.OnClickListener() {
+		// Divide functionality
+		btnDivide.setOnClickListener(new View.OnClickListener() {
 
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						float oper1 = Float.parseFloat(operand1.getText().toString());
-						float oper2 = Float.parseFloat(operand2.getText().toString());
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				float oper1 = Float.parseFloat(operand1.getText().toString());
+				float oper2 = Float.parseFloat(operand2.getText().toString());
 
-						float theResult = oper1 / oper2;
+				float theResult = oper1 / oper2;
 
-						result.setText(Float.toString(theResult));
-					}
-				});
-				
-				// Clear functionality
-				btnClear.setOnClickListener(new View.OnClickListener() {
+				result.setText(Float.toString(theResult));
+			}
+		});
 
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						operand1.setText("");
-						operand2.setText("");
-						result.setText("0.00");
-					}
-				});
+		// Clear functionality
+		btnClear.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				operand1.setText("");
+				operand2.setText("");
+				result.setText("0.00");
+			}
+		});
 
 	}
 
